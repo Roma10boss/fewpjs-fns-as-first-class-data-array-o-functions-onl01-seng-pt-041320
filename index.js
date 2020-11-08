@@ -33,3 +33,12 @@ const routine = [wakeDog,leashDog,walkToPark,throwFrisbee,walkHome,unleashDog];
 let output = []
 
 
+function exerciseDog(dogName, dogBreed) {
+    let i = 0 
+    for (i = 0; i < routine.length; i++) {
+        let routineToRun = routine[i]
+        let outputToSave = routineToRun(dogName, dogBreed)
+        output.push(outputToSave)
+    }
+    return output
+}
